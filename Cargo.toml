@@ -1,0 +1,19 @@
+[package]
+name = "owotility"
+version = "0.1.0"
+edition = "2021"
+authors = ["Chrontax"]
+description = "Configuration utility for OwOpad firmware"
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/chrontax/owotility"
+repository = "https://github.com/chrontax/owotility"
+readme = "README.md"
+categories = ["command-line-utilities"]
+keywords = ["config", "utility", "owopad", "keypad"]
+
+[dependencies]
+clap = { version = "4.5.3", features = ["cargo"] }
+indicatif = "0.17.8"
+serial2 = "0.2.20"
+serialport = "4.3.0"
+usbd-human-interface-device = "0.4.5"
