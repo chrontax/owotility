@@ -1,6 +1,6 @@
 [package]
 name = "owotility"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Chrontax"]
 description = "Configuration utility for OwOpad firmware"
