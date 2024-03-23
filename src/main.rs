@@ -13,6 +13,9 @@ use std::{
 };
 use usbd_human_interface_device::page::Keyboard;
 
+#[cfg(feature = "gui")]
+mod gui;
+
 const BAUD_RATE: u32 = 115200;
 
 fn main() {
@@ -70,7 +73,10 @@ fn main() {
                 .send(matches.get_one::<String>("COMMAND").unwrap()),
             "status" => print_status(dev.unwrap()),
             _ => unreachable!(),
-        }
+        };
+    } else {
+        #[cfg(feature = "gui")]
+        gui::run_gui();
     }
 }
 
